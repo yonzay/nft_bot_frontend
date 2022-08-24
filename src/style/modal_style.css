@@ -1,0 +1,185 @@
+.ace-modal .ace_gutter {
+	background: #141414;
+	color: #595959;
+	border-right: 1px solid #282828;
+}
+
+.ace-modal .ace_gutter-cell.ace_warning {
+	background-image: none;
+	background: rgb(97, 136, 103);
+	border-left: none;
+	padding-left: 0;
+	color: #000;
+}
+
+.ace-modal .ace_gutter-cell.ace_error {
+	background-position: -6px center;
+	background-image: none;
+	background: #F10;
+	border-left: none;
+	padding-left: 0;
+	color: #000;
+}
+
+.ace-modal .ace_print-margin {
+	border-left: 1px solid #555;
+	right: 0;
+	background: #1D1D1D;
+}
+
+.ace-modal {
+	background-color: #161616;
+	color: hsl(0, 0%, 100%);
+}
+
+.ace-modal .ace_cursor {
+	width: 1px;
+    border-color: rgba(247, 247, 247, 0.9);
+}
+
+.ace-modal .ace_cursor.ace_overwrite {
+	border-left: 0px;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.ace-modal .ace_marker-layer .ace_selection {
+	background: #000000;
+}
+
+.ace-modal .ace_marker-layer .ace_step {
+	background: rgb(219, 177, 174);
+}
+
+.ace-modal .ace_marker-layer .ace_bracket {
+	margin: -1px 0 0 -1px;
+	border: 1px solid #a27aff;
+}
+
+.ace-modal .ace_marker-layer .ace_active-line {
+	background: #333;
+}
+
+.ace-modal .ace_gutter-active-line {
+	background-color: #222;
+}
+
+.ace-modal .ace_invisible {
+	color: #404040;
+}
+
+.ace-modal .ace_keyword {
+	color:#00698F;
+}
+
+.ace-modal .ace_keyword.ace_operator {
+	color:#FF308F;
+}
+
+.ace-modal .ace_constant {
+	color:#1EDAFB;
+}
+
+.ace-modal .ace_constant.ace_language {
+	color:#37eb00;
+}
+
+.ace-modal .ace_constant.ace_library {
+	color:#8DFF0A;
+}
+
+.ace-modal .ace_constant.ace_numeric {
+	color:#89ecfd;
+}
+
+.ace-modal .ace_invalid {
+	color:#FFFFFF;
+	background-color:#990000;
+}
+
+.ace-modal .ace_invalid.ace_deprecated {
+	color:#FFFFFF;
+	background-color:#990000;
+}
+
+.ace-modal .ace_support {
+	color: #999;
+}
+
+.ace-modal .ace_support.ace_function {
+	color:#00AEEF;
+}
+
+.ace-modal .ace_function {
+	color:#00AEEF;
+}
+
+.ace-modal .ace_string {
+	color:#a27aff;
+}
+
+.ace-modal .ace_comment {
+	color:rgb(153, 142, 255);
+	font-style:italic;
+	padding-bottom: 0px;
+}
+
+.ace-modal .ace_variable {
+	color:#ffffff;
+}
+
+.ace-modal .ace_meta.ace_tag {
+	color:#BE53E6;
+}
+
+.ace-modal .ace_entity.ace_other.ace_attribute-name {
+	color:#FFFF89;
+}
+
+.ace-modal .ace_markup.ace_underline {
+	text-decoration: underline;
+}
+
+.ace-modal .ace_fold-widget {
+	text-align: center;
+}
+
+.ace-modal .ace_fold-widget:hover {
+	color: #777;
+}
+
+.ace-modal .ace_fold-widget.ace_start,
+.ace-modal .ace_fold-widget.ace_end,
+.ace-modal .ace_fold-widget.ace_closed{
+	background: none !important;
+	border: none;
+	box-shadow: none;
+}
+
+.ace-modal .ace_fold-widget.ace_start:after {
+	content: '▾'
+}
+
+.ace-modal .ace_fold-widget.ace_end:after {
+	content: '▴'
+}
+
+.ace-modal .ace_fold-widget.ace_closed:after {
+	content: '‣'
+}
+
+.ace-modal .ace_indent-guide {
+	border-right:1px dotted #333;
+	margin-right:-1px;
+}
+
+.ace-modal .ace_fold { 
+	background: #222;
+	border-radius: 3px;
+	color: #7AF;
+	border: none;
+}
+
+.ace-modal .ace_fold:hover {
+	background: #CCC;
+	color: #000;
+}

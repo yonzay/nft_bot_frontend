@@ -1,0 +1,177 @@
+{
+  "name": "nft-application",
+  "productName": "nft_bot",
+  "version": "1.0.3",
+  "description": "nft botting frontend",
+  "main": ".webpack/main/chronicle.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint --ext .ts,.tsx ."
+  },
+  "author": {
+    "name": "yonzay",
+  },
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "C:/Users/<NAME>/Desktop/NFT-Application/assets/icon.ico",
+        "Win32MetadataOptions": {
+          "requested-execution-level": "requireAdministrator"
+        }
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "setupIcon": "C:/Users/<NAME>/Desktop/NFT-Application/assets/icon.ico",
+            "copyright": "Copyright (C) 2020-2023 MoonDweller, LLC. All rights reserved."
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ],
+      "plugins": [
+        [
+          "@electron-forge/plugin-webpack",
+          {
+            "mainConfig": "./webpack.main.config.js",
+            "renderer": {
+              "config": "./webpack.renderer.config.js",
+              "entryPoints": [
+                {
+                  "html": "./src/index.html",
+                  "js": "./src/react/main/index.tsx",
+                  "name": "main"
+                },
+                {
+                  "html": "./src/index.html",
+                  "js": "./src/react/chronicle/index.tsx",
+                  "name": "chronicle"
+                },
+                {
+                  "html": "./src/index.html",
+                  "js": "./src/react/authentication/index.tsx",
+                  "name": "authentication"
+                },
+                {
+                  "html": "./src/index.html",
+                  "js": "./src/react/settings/index.tsx",
+                  "name": "settings"
+                },
+                {
+                  "html": "./src/index.html",
+                  "js": "./src/react/decrypt/index.tsx",
+                  "name": "decrypt"
+                },
+                {
+                  "html": "./src/index.html",
+                  "js": "./src/react/generate_wallet/index.tsx",
+                  "name": "generate_wallet"
+                },
+                {
+                  "html": "./src/index.html",
+                  "js": "./src/react/create_wallet_group/index.tsx",
+                  "name": "create_wallet_group"
+                },
+                {
+                  "html": "./src/index.html",
+                  "js": "./src/react/create_sniper_task/index.tsx",
+                  "name": "create_sniper_task"
+                },
+                {
+                  "html": "./src/index.html",
+                  "js": "./src/react/create_contract_task/index.tsx",
+                  "name": "create_contract_task"
+                },
+                {
+                  "html": "./src/index.html",
+                  "js": "./src/react/edit_wallet_group/index.tsx",
+                  "name": "edit_wallet_group"
+                },
+                {
+                  "html": "./src/index.html",
+                  "js": "./src/react/view_sniper_task/index.tsx",
+                  "name": "view_sniper_task"
+                },
+                {
+                  "html": "./src/index.html",
+                  "js": "./src/react/view_contract_task/index.tsx",
+                  "name": "view_contract_task"
+                },
+                {
+                  "html": "./src/index.html",
+                  "js": "./src/react/confirmation/index.tsx",
+                  "name": "confirmation"
+                },
+                {
+                  "html": "./src/index.html",
+                  "js": "./src/react/key_derivation/index.tsx",
+                  "name": "key_derivation"
+                }
+              ]
+            },
+            "devContentSecurityPolicy": "upgrade-insecure-requests"
+          }
+        ]
+      ]
+    }
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.61",
+    "@electron-forge/maker-deb": "^6.0.0-beta.61",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.61",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.61",
+    "@electron-forge/maker-zip": "^6.0.0-beta.61",
+    "@electron-forge/plugin-webpack": "^6.0.0-beta.63",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "@vercel/webpack-asset-relocator-loader": "1.7.0",
+    "css-loader": "^6.5.1",
+    "electron": "16.0.5",
+    "eslint": "^7.6.0",
+    "eslint-plugin-import": "^2.20.0",
+    "file-loader": "^6.2.0",
+    "fork-ts-checker-webpack-plugin": "^6.0.1",
+    "native-ext-loader": "^2.3.0",
+    "node-loader": "^2.0.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "@project-serum/anchor": "^0.23.0",
+    "@solana/web3.js": "^1.37.0",
+    "ace-builds": "^1.4.13",
+    "copy-webpack-plugin": "^10.2.4",
+    "electron-log": "^4.4.6",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-updater": "^4.6.1",
+    "ethers": "^5.5.4",
+    "got": "^12.0.1",
+    "node-addon-api": "^4.2.0",
+    "react": "^17.0.2",
+    "react-ace": "^9.5.0",
+    "react-dom": "^17.0.2",
+    "react-tsparticles": "^1.37.6",
+    "tsparticles": "^1.37.6",
+    "ws": "^8.5.0"
+  }
+}

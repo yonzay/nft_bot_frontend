@@ -1,0 +1,37 @@
+{
+	"fpsLimit": 60,
+	"fullScreen": {
+		"enable": false
+	},
+	"particles": {
+		"number": {
+			"value": 60,
+			"density": {
+				"enable": true,
+				"value_area": 1500
+			}
+		},
+		"line_linked": {
+			"enable": true,
+			"opacity": 0.1
+		},
+		"move": {
+			"direction": "bottom",
+			"enable": true,
+			"outMode": "out",
+			"random": true,
+			"speed": 1,
+			"straight": true
+		},
+		"size": {
+			"value": 1
+		},
+		"opacity": {
+			"anim": {
+				"enable": true,
+				"speed": 3,
+				"opacity_min": 0.5
+			}
+		}
+	}
+}
